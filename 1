@@ -1,0 +1,59 @@
+// Задача 25: Напишите цикл, который принимает на вход два числа (a и b) и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
+Console.WriteLine($"\nЗадача 25. Возведене числа a в натуральную степень b");
+
+ Console.Write("Введите число a: ");
+  int numbera = Convert.ToInt32(Console.ReadLine());
+  Console.Write("Введите число b: ");
+  int numberb = Convert.ToInt32(Console.ReadLine());
+  int step = a;
+  
+  for (int i = 1; i<b; i++)
+  {
+    step = step * a;
+  }
+
+  Console.WriteLine("A в степени В равно: " + step);
+
+Console.WriteLine($"\nЗадача 27. Выдаёт сумму  цифр в числе");
+int A = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+
+while (A > 0);
+{
+    int number = c % 10;
+    A = A/10;
+    sum = sum + number;
+}
+Console.WriteLine("сумма всех цифр в числе равна:" + sum);
+
+/*
+Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+6, 1, 33 -> [6, 1, 33]
+*/
+
+int Array = Read("Введите длинну массива: ");
+
+int[] rndArr = new int[Array];
+Console.Write("[");
+for (int i = 0; i < rndArr.Length; i++)
+{
+    rndArr[i] = new Random().Next(1,9);
+    Console.Write(rndArr[i]);
+
+    if (i == rndArr.Length - 1)
+    {
+        Console.Write("]");
+    }
+    else Console.Write(", ");
+}
+
+
+// Функция ввода
+int Read(string msg)
+{
+    Console.Write(msg);
+    return Convert.ToInt32(Console.ReadLine());
+}
